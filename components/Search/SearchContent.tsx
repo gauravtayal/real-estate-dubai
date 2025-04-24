@@ -44,7 +44,6 @@ const SearchContent: React.FC<SearchContentProps> = () => {
           </div>
         </div>
       </section>
-      <AdvanceSearch />
       <Table />
     </>
   );

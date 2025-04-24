@@ -1,4 +1,6 @@
+import { redirect } from "next/dist/server/api-utils";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 type AdvanceSearchProps = {};
 
@@ -7,6 +9,7 @@ const AdvanceSearch: React.FC<AdvanceSearchProps> = () => {
   const [locationData, SetLocationData] = useState("");
   const [propertySizeData, SetPropertySizeData] = useState("");
   const [budgetTypeData, SetBudgetTypeData] = useState("");
+  const router = useRouter();
 
   const propertyType = [
     { id: 0, tag: "Properly Type " },
@@ -137,7 +140,10 @@ const AdvanceSearch: React.FC<AdvanceSearchProps> = () => {
           </div>
 
           <div className="flex flex-col">
-            <button className="bg-[#00aeff] px-[24px] py-[12px] text-[15px] rounded-[3px] text-white font-medium">
+            <button
+              onClick={() => router.push("/search")}
+              className="bg-[#00aeff] px-[24px] py-[12px] text-[15px] rounded-[3px] text-white font-medium"
+            >
               search
             </button>
           </div>

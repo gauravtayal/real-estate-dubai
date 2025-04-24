@@ -21,7 +21,7 @@ export type Property = {
   StartingPrice: number;
 };
 
-export const columns: ColumnDef<Property>[] = [
+export const columns: ColumnDef<Property, any>[] = [
   {
     accessorKey: "Developer",
     header: "Developer",

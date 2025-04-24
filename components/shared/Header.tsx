@@ -48,8 +48,8 @@ const Header: React.FC<HeaderProps> = () => {
   const navigate: Array<navigateInterface> = [
     {
       id: 2,
-      text: "Properties",
-      path: "/properties",
+      text: "Search",
+      path: "/search",
     },
     {
       id: 3,
@@ -91,19 +91,6 @@ const Header: React.FC<HeaderProps> = () => {
         ))}
 
         <Link
-          className={`  hover:text-primary p-4 font-semibold ${
-            route.pathname === "/" && isTrue ? "text-black" : " text-white"
-          }
-            ${route.pathname !== "/" && "text-secondary"}
-          `}
-          href="tel:+8801768227738"
-        >
-          <li>
-            <span>+8801768227738</span>{" "}
-          </li>
-        </Link>
-
-        <Link
           href="/person"
           className={`  hover:text-primary font-semibold  p-4 ${
             route.pathname === "/" && isTrue ? "text-black" : " text-white"
@@ -115,23 +102,6 @@ const Header: React.FC<HeaderProps> = () => {
             <CgProfile className="w-[38px] text-[20px]" />
           </li>
         </Link>
-
-        <button
-          className={` border-[1px] border-white py-2 
-            px-[15px] text-[15px] font-medium leading-[20px] rounded-[5px] ${
-              route.pathname === "/" && isTrue
-                ? "text-white bg-secondary"
-                : "text-black bg-white"
-            }
-            
-            ${route.pathname !== "/" && "bg-secondary !text-white"}`}
-        >
-          <li>
-            <Link className=" p-4" href={"/"}>
-              Create a Listing
-            </Link>
-          </li>
-        </button>
       </nav>
     </div>
   );
@@ -151,15 +121,6 @@ const Header: React.FC<HeaderProps> = () => {
           ))}
 
           <Link
-            className={`hover:text-primary font-semibold text-black`}
-            href="tel:+8801768227738"
-          >
-            <li>
-              <span>+8801768227738</span>
-            </li>
-          </Link>
-
-          <Link
             href="/person"
             className={` p-4  hover:text-primary font-semibold text-black`}
           >
@@ -167,22 +128,6 @@ const Header: React.FC<HeaderProps> = () => {
               <CgProfile className="text-[20px] w-[36px]  -mx-5 " />
             </li>
           </Link>
-
-          <button
-            className={` mx-5 p-4 border-[1px] border-white py-2 
-        px-[15px] text-[15px] font-medium leading-[20px] rounded-[5px] text-white bg-black`}
-          >
-            <li>
-              <Link href="/">Create a Listing</Link>
-            </li>
-          </button>
-
-          <button
-            className="absolute right-[20px] top-[20px] "
-            onClick={() => setOpen(false)}
-          >
-            <AiFillCloseCircle className="text-[27px] text-black z-20" />
-          </button>
         </nav>
       )}
       {!open && (
@@ -226,7 +171,7 @@ const Header: React.FC<HeaderProps> = () => {
                 
                 ${route.pathname !== "/" && "text-secondary"}`}
               >
-                Hasan Rifat
+                Dubai Properties
               </p>
             </Link>
           </div>
