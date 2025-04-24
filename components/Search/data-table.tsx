@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import {
   ColumnDef,
   flexRender,
@@ -35,7 +35,13 @@ interface ColumnFilter {
   value: unknown;
 }
 
-export function DataTable({ columns, data }: { columns: any; data: any }) {
+export default function DataTable({
+  columns,
+  data,
+}: {
+  columns: any;
+  data: any;
+}) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});

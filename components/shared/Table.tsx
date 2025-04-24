@@ -1,7 +1,6 @@
 import React from "react";
-import SectionLayout from "./SectionLayout";
-import { DataTable } from "@/pages/search/data-table";
-import { columns, Property } from "@/pages/search/columns";
+import DataTable from "@/components/Search/data-table";
+import { columns } from "@/components/Search/columns";
 import { Propeties } from "../../data/property.json";
 
 type TableProps = {};

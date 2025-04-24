@@ -1,9 +1,5 @@
 import React from "react";
-import Propeties from "../../data/property.json";
-import AdvanceSearch from "../shared/AdvanceSearch";
 import Table from "../shared/Table";
-import { DataTable } from "@/pages/search/data-table";
-import { columns } from "@/pages/search/columns";
 type SearchContentProps = {};
 
 const SearchContent: React.FC<SearchContentProps> = () => {
